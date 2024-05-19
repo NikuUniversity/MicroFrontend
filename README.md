@@ -1,38 +1,34 @@
-# MicroFrontend
-Project to Learn Micro Frontend
-Micro frontends are an intriguing approach to building scalable and maintainable web applications.
-Let’s dive into creating a course on implementing micro frontends using Angular.
-Here are the key steps:
+# Micro Apps with Web Components and Angular Elements
 
-Understanding Micro Frontends:
-Micro frontends break down a web application into smaller, independent parts based on business domains or functionality.
+This example consists of three Angular projects that demonstrate how to use Web Components/ Angular Elements to implement a shell that loads micro apps:
 
-Each micro frontend is like a subset of the larger application, encapsulating specific functionality or related features.
+- **shell (/src):** Shell loading micro apps
+- **client-a (/projects/client-a)**: Demo micro app
+- **client-b (/projects/client-b)**: Another demo micro app
 
-Setting Up the Environment:
-Ensure you have Node.js and npm installed.
+## Install Dependencies
 
-Install Angular CLI globally: npm install -g @angular/cli@16.
+```
+npm install
+```
 
-Create a new Angular project: ng new my-micro-frontend-app.
-Architectural Design:
-Plan how to divide your application into micro frontends.
-For example, in an e-commerce app, you might have separate micro frontends for product search, cart management, and checkout.
-These micro frontends should be independent enough to operate on their own but also capable of integrating into the main application.
-Module Federation with Angular:
-Leverage Webpack’s Module Federation feature.
-This allows dynamically loading modules from other applications, crucial for micro frontends.
-Different teams can develop, compile, and deploy micro frontends independently.
-Communication Between Micro Frontends:
-Define an API contract for communication between micro frontends.
-Keep communication minimal and well-defined to avoid complicated dependencies.
-Build and Deploy:
-Build each micro frontend individually.
-Seamlessly integrate them into a cohesive product.
-Deploy your micro frontend-based application.
-Remember, micro frontends enhance scalability, improve team efficiency, and allow flexibility in technology use. Happy coding! 🚀
+## Standalone
 
-For more detailed tutorials, you can explore articles like:
+For debugging and testing, you can start each of those projects individually. Please note that the shell will throw some exceptions when doing so because it does not find the micro apps that are expected in an sub folder for the sake of simplicity.
 
-Implementing Micro Frontends in Angular 16 with Module Federation
-How to Build Micro Frontends Using Module Federation in Angular12
+Use one of the following commands for this:
+
+```
+ng serve --project shell --open
+ng serve --project client-a --open
+ng serve --project client-b --open
+```
+
+## Everything together
+
+For using everything together, you have to build the example and run it:
+
+```
+npm run build
+npm start
+```
