@@ -1,13 +1,19 @@
 # MicroFrontend
 Project to Learn Micro Frontend
-Micro frontends are an intriguing approach to building scalable and maintainable web applications. Let’s dive into creating a course on implementing micro frontends using Angular. Here are the key steps:
+Micro frontends are an intriguing approach to building scalable and maintainable web applications.
+Let’s dive into creating a course on implementing micro frontends using Angular.
+Here are the key steps:
 
 Understanding Micro Frontends:
 Micro frontends break down a web application into smaller, independent parts based on business domains or functionality.
+
 Each micro frontend is like a subset of the larger application, encapsulating specific functionality or related features.
+
 Setting Up the Environment:
 Ensure you have Node.js and npm installed.
+
 Install Angular CLI globally: npm install -g @angular/cli@16.
+
 Create a new Angular project: ng new my-micro-frontend-app.
 Architectural Design:
 Plan how to divide your application into micro frontends.
