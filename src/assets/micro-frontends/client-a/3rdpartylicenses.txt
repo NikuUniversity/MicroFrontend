@@ -1,5 +1,0 @@
-@angular/router
-MIT
-
-shell
-MIT
